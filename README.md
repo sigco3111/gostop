@@ -5,7 +5,7 @@
 
 이 프로젝트는 클래식 한국 고스톱 게임을 웹 브라우저에서 즐길 수 있도록 구현한 싱글 플레이어 게임입니다. 플레이어는 16인 토너먼트에 참가하여 개성 넘치는 AI 상대들을 차례로 꺾고 최종 우승을 목표로 합니다.
 
-실행주소1 : https://gostop.vercel.app/
+실행주소1 : https://gostop-five.vercel.app/
 
 실행주소2 : https://dev-canvas-pi.vercel.app/
 
