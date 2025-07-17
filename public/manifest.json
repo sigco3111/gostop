@@ -1,0 +1,16 @@
+{
+  "name": "토너먼트 맞고",
+  "short_name": "맞고",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x96",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#22543d",
+  "theme_color": "#22543d"
+} 

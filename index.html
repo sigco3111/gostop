@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- 다양한 디바이스 지원을 위한 추가 favicon 설정 -->
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>토너먼트 맞고</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0"
+  }
+}
+</script>
+<style>
+  /* Animation for a card flying to the center and growing */
+  @keyframes play-card-animation {
+    from {
+      transform: scale(0.5) translateY(200px);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-play-card {
+    animation: play-card-animation 0.25s ease-out forwards;
+  }
+
+  /* Container for the 3D flip effect */
+  .flip-card-container {
+    perspective: 1000px;
+  }
+  
+  /* The element that gets flipped */
+  .card-flipper {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: flip-card-animation 0.4s ease-in-out forwards;
+  }
+
+  /* Shared styles for front and back of the card */
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+  }
+
+  /* Position the front of the card (initially hidden) */
+  .card-front {
+    transform: rotateY(180deg);
+  }
+
+  /* Keyframes for the flip animation */
+  @keyframes flip-card-animation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .animate-fade-in {
+      animation: fade-in 0.15s ease-in-out;
+  }
+  @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Highlight animation for completed sets */
+  @keyframes highlight-glow {
+    0%, 100% {
+      box-shadow: 0 0 6px 3px rgba(253, 244, 155, 0.6), inset 0 0 4px 2px rgba(253, 244, 155, 0.4);
+      border-color: #FBBF24; /* amber-400 */
+    }
+    50% {
+      box-shadow: 0 0 16px 6px rgba(253, 244, 155, 0.8), inset 0 0 8px 4px rgba(253, 244, 155, 0.6);
+      border-color: #FDE047; /* yellow-300 */
+    }
+  }
+  .highlighted-card {
+    animation: highlight-glow 1.5s infinite ease-in-out;
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-green-800">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
