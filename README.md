@@ -5,9 +5,10 @@
 
 이 프로젝트는 클래식 한국 고스톱 게임을 웹 브라우저에서 즐길 수 있도록 구현한 싱글 플레이어 게임입니다. 플레이어는 16인 토너먼트에 참가하여 개성 넘치는 AI 상대들을 차례로 꺾고 최종 우승을 목표로 합니다.
 
-실행주소1 : https://gostop-five.vercel.app/
+[![Live](https://img.shields.io/badge/Live-GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://sigco3111.github.io/gostop/)
 
-실행주소2 : https://dev-canvas-pi.vercel.app/
+> **호스팅 이력**: 본 프로젝트는 Vercel에서 운영되었으나 2026-08에 GitHub Pages로 전환했습니다. 공식 라이브 데모는 위 Pages URL입니다.
+
 
 ## ✨ 주요 기능
 
